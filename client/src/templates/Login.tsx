@@ -1,56 +1,34 @@
-import { styled } from 'styled-components'
+import { styled } from "styled-components";
+import LoginForm from "../components/LoginForm";
 
 const Container = styled.div`
-    display: flex;
+    background-color: #435865;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    position: relative;
+    overflow: hidden;
 
-    * {
-        flex-grow: 1
+    &::after {
+        content: " ";
+        background-color: #243238;
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        transform: skew(15deg) translateX(50%);
+        box-shadow: -2px -2px 5px #000000;
     }
 
-    .image {
-        background-color: black;
-        color: #FFFF;
-    }
-
-    .container-login-form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: red;
-    }
-
-    form {
-        border: 1 px solid  black;
-        padding: 2rem;
-    }
-
-    div {
-        margin-botton: 1rem;
-
-        label {
-            display: block;
-            color: 
-        }
-
+    > * {
+        position: relative;
+        z-index: 9;
     }
 `
 
 export default () => <>
     <Container>
-        <div className="image">
-        </div>
-        <form>
-            <div>
-                <label>Login</label>
-                <input name="login" />
-            </div>
-            <div>
-                <label>Senha</label>
-                <input type="password" name="password" />
-            </div>
-            <button>entrar</button>
-            <button>recuperar senha</button>
-        </form>
+        <LoginForm />
     </Container>
-    </>
+</>

@@ -1,5 +1,5 @@
 export default () => <>
-<Footer>
+<footer>
     Footer
-</Footer>
+</footer>
 </>

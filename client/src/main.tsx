@@ -13,8 +13,6 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
       <Route path='/' Component={Login} />
       <Route path='/home' Component={Home} />
       <Route path='/' Component={NotFound} />
-    <Login />
-    <Home />
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,
