@@ -90,42 +90,40 @@ const AccentButton = styled.button`
     cursor: pointer;
 `
 
-const HiddenButton = styled.button`
-    border: 0 none;
-    color: #222222;
-    background-color: transparent;
-    font-size: 1.25rem;
-    font-weight: 500;
-    padding: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-`
 
 export default () => <>
     <MyForm>
         <div className="container">
+
             <div className="title">
-                <h1>Bem-vindo!</h1>
-                <h2>Welcome, bien venido, willkommen</h2>
+                <h1>Cadastro</h1>
             </div>
+
             <div className="input">
-                <label>Login</label>
-                <input name="login" />
+                <label>Nome completo</label>
+                <input name="name" />
             </div>
+
+            <div className="input">
+                <label>Email</label>
+                <input type="name" name="name" />
+            </div>
+
             <div className="input">
                 <label>Senha</label>
                 <input type="password" name="password" />
-            </div>
-            <div className="action">
+
+                <div className="input">
+                    <label>Repita a sua senha</label>
+                    <input type="password" name="password" />
+                </div>
+
+                <div className="action">
                     <AccentButton>
                         <Link to="/home">entrar</Link>
                     </AccentButton>
-              <HiddenButton>recuperar senha</HiddenButton>
+                </div>
             </div>
-        </div>
-        <div className="sign-up">
-            é a sua primeira vez aqui, <Link to="/signup">cadastre-se!</Link>
         </div>
     </MyForm>
 </>
-
